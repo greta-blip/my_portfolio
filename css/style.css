@@ -1,0 +1,160 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+  color: black;
+  font-family: 'Gopher Text',sans-serif;
+  background-position: center;
+  background-size: cover;
+  font-size: 16px;
+  border: 2px black;
+  margin: 1.2em;
+  padding-top: 10px
+  background-repeat: no-repeat;
+  background-color: #DDDDDD;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .155em;
+  position: relative;
+  display: block;
+  padding: 1em;
+}
+
+main{
+
+}
+
+img{
+  width:25%;
+  height:20%;
+  align-items:flex-start;
+}
+
+
+
+h1{
+  color: #0f0f15;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+p{
+  color:white;
+  padding-top: 10px;
+  word-spacing: inherit;
+}
+
+header{
+  font-style: normal;
+  color: black;
+  text-align:right
+
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 100px 400px 100px;
+  grid-template-rows: 30px repeat(5,auto) 100px;
+  grid-row-gap: 15px;
+
+}
+.home, .about, .resume, .contact{
+  grid-column: 2/span 1;
+}
+
+.home{
+  grid-column: 2 auto;
+}
+
+
+
+footer{
+  position: fixed;
+  min-height: 60px;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  background:black;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+
+
+
+
+/**flip_card**/
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 200px;
+  border: 7px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #cccc;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back-header {
+  color: black;
+}
