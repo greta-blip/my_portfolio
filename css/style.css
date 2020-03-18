@@ -6,7 +6,7 @@ body{
   font-family: 'Gopher Text',sans-serif;
   background-position: center;
   background-size: cover;
-  font-size: 16px;
+  font-size: 14px;
   border: 2px black;
   margin: 1.2em;
   padding-top: 10px
@@ -14,13 +14,29 @@ body{
   background-color: #DDDDDD;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: .155em;
+  letter-spacing: .100em;
   position: relative;
   display: block;
   padding: 1em;
 }
 
 main{
+
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #DDDDDD;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 450px;
+  height: 300px;
+  margin: 10px;
+  margin-top: 100px;
+  margin-left: 150px;
+  text-align: center;
 
 }
 
@@ -41,7 +57,7 @@ h1{
 
 
 p{
-  color:white;
+  color:black;
   padding-top: 10px;
   word-spacing: inherit;
 }
@@ -54,16 +70,12 @@ header{
 }
 
 header p{
-  color: white;
+  color: black;
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;
-}
 
 .container{
   display:grid;
@@ -81,14 +93,13 @@ header p{
 }
 
 
-
 footer{
   position: fixed;
   min-height: 60px;
   left:0px;
   bottom:0px;
   width:100%;
-  background:black;
+  background:grey;
   text-align: center;
   color: white;
 }
@@ -158,3 +169,66 @@ footer{
 .flip-card-back-header {
   color: black;
 }
+
+section
+{
+  width: 1000px;
+  height: 600px;
+  margin-left: 15%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  border-color: black;
+}
+
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 600px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 200px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+/**
+body {
+  margin: 0;
+  padding: 0;
+}
+**/
