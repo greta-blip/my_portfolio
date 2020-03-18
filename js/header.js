@@ -10,3 +10,12 @@
 		 </ol>
 	 </nav>
 	</header>`;
+
+/**
+	.nav_item a:hover, a:focus{
+		color: #50C7C7;
+		text-decoration: underline;
+		-webkit-text-decoration-style: dotted;
+						text-decoration-style: dotted;
+	}
+**/

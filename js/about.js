@@ -4,10 +4,12 @@ function getRandomSize(min, max) {
 
 var allImages = "";
 
-for (var i = 0; i < 11; i++) {
+for (var i = 0; i < 13; i++) {
   var width = getRandomSize(200, 400);
   var height =  getRandomSize(200, 400);
-  allImages += '<img src="https://placekitten.com/'+width+'/'+height+'" alt="pretty kitty">';
 }
 
 $('#photos').append(allImages);
+
+
+/**allImages += '<img src="https://placekitten.com/'+width+'/'+height+'" alt="pretty kitty">';**/
