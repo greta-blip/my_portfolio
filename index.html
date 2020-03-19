@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Home</title>
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
@@ -31,7 +32,6 @@
 	  margin: auto;
 	}
 
-	/* Next & previous buttons */
 	.prev, .next {
 	  cursor: pointer;
 	  position: absolute;
@@ -54,7 +54,7 @@
 	  border-radius: 3px 0 0 3px;
 	}
 
-	/* On hover, add a black background color with a little bit see-through */
+
 	.prev:hover, .next:hover {
 	  background-color: black;
 	}
@@ -95,7 +95,7 @@
 	  background-color: #717171;
 	}
 
-	/* Fading animation */
+
 	.fade {
 	  -webkit-animation-name: fade;
 	  -webkit-animation-duration: 1.5s;
@@ -113,13 +113,12 @@
 	  to {opacity: 1}
 	}
 
-	/* On smaller screens, decrease text size */
 	@media only screen and (max-width: 300px) {
 	  .prev, .next,.text {font-size: 11px}
 	}
 	</style>
 </head>
-
+<main>
 <body>
 <h1>  Welcome to my Portfolio
 </h1>
@@ -140,13 +139,13 @@ They exhibit work done with Adobe Photoshop, Illustrator and Adobe XD.
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 5</div>
-  <img id ="peony_collage" src="images/peony_collage.jpg" alt="contact" style="width:65%">
+  <img id ="peony_collage" src="images/peony_collage.jpg" alt="contact" style="width:100%; height:70%;">
   <div class="text">Peony Poster Collage</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 5</div>
-  <img id="koi_hifidelity" src="images/koi_hifidelity.jpg" alt="koifish" style="width:100%">
+  <img id="koi_hifidelity" src="images/koi_hifidelity.jpg" alt="koifish" style="width:100%; height:50%;">
   <div class="text">Koi Hifidelity Prototype</div>
 </div>
 
@@ -158,13 +157,13 @@ They exhibit work done with Adobe Photoshop, Illustrator and Adobe XD.
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 5</div>
-  <img id="logo_design" src="images/logo_design.jpg" alt="koi logo" style="width:70%">
+  <img id="logo_design" src="images/logo_design.jpg" alt="koi logo" style="width:70%; height:70%;">
   <div class="text">Logo Design</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">5 / 5</div>
-  <img id="logo_design" src="images/monsteralphabet.jpg" alt="monster alphabet" style="width:80%">
+  <img id="monsteralaphabet" src="images/monsteralphabet.jpg" alt="monster alphabet" style="width:80%">
   <div class="text">Monster Alphabet</div>
 </div>
 
@@ -213,6 +212,7 @@ function showSlides(n) {
 
 
 </body>
+</main>
 <div class="footer" id= "footer"></div>
 <script type="text/javascript" src="js/footer.js"></script>
 </html>

@@ -25,19 +25,19 @@ main{
 }
 .flex-container {
   display: flex;
-  flex-wrap: nowrap;
+  grid-template-columns: repeat(2,1fr);
+  flex-wrap: wrap;
   background-color: #DDDDDD;
+
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
   width: 450px;
   height: 300px;
   margin: 10px;
   margin-top: 100px;
   margin-left: 150px;
   text-align: center;
-
 }
 
 img{
@@ -106,7 +106,7 @@ footer{
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; /* Removes scroll animation */
+      scroll-behavior: auto;
   }
 
   .skip a{
@@ -123,21 +123,17 @@ footer{
   }
 }
 
-
-
-
-
 /**flip_card**/
 .flip-card {
   background-color: transparent;
   width: 250px;
   height: 200px;
   border: 7px solid black;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 
 }
 
-/* This container is needed to position the front and back side */
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -147,12 +143,12 @@ footer{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -161,7 +157,6 @@ footer{
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #bbb;
   color: black;
@@ -234,9 +229,3 @@ section
   column-count:         1;
   }
 }
-/**
-body {
-  margin: 0;
-  padding: 0;
-}
-**/
